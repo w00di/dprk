@@ -1,0 +1,4 @@
+ioc,threat,ioc_category,notes,source
+echo T24gRXJyb3IgUmVzdW1lIE5leHQ %USERPROFILE% Links MXFhejJ3c3gzZWRjA dat,kimsuky,cmd,echoed Base64 string is redirected and saved into a .dat file,https://www.rapid7.com/blog/post/2024/03/20/the-updated-apt-playbook-tales-from-the-kimsuky-threat-actor-group/
+certutil -decode %USERPROFILE% Links MXFhejJ3c3gzZWRjA dat vbs,kimsuky,cmd,decode the Base64-encoded .dat file back into a .vbs (VBScript) file,https://www.rapid7.com/blog/post/2024/03/20/the-updated-apt-playbook-tales-from-the-kimsuky-threat-actor-group/
+REG ADD HKCU SOFTWARE Microsoft Windows CurrentVersion Run /v Document /t REG_SZ /d %USERPROFILE% Links MXFhejJ3c3gzZWRjA vbs /f,kimsuky,cmd,command ensures that the decoded VBScript runs every time the user logs in,https://www.rapid7.com/blog/post/2024/03/20/the-updated-apt-playbook-tales-from-the-kimsuky-threat-actor-group/
