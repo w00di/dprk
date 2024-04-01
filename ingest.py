@@ -31,7 +31,7 @@ def intel(source, threat, ioc, ioc_type, notes):
     
     # Parse Indicator
     indicators = []
-    delimiters = [' ','\\','"','.']
+    delimiters = [' ','"']
     exclusions = ['BASE64','>','FILENAME']
     
     if ioc_type == "cmd":
@@ -39,7 +39,7 @@ def intel(source, threat, ioc, ioc_type, notes):
             ioc = ' '.join(ioc.split(delimiter))
         
         for cmd in ioc.split():
-            if cmd not in indicators and cmd not in exclusions:
+            if cmd not in indicators:
                 indicators.append(cmd)
         
         ioc = ' '.join(indicators)
