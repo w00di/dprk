@@ -1,2 +1,0 @@
-ioc,threat,ioc_type,notes,source
-REG ADD HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run /v Document /t REG_SZ /d %USERPROFILE%\Links\MXFhejJ3c3gzZWRjA vbs /f,kimsuky,cmd,command ensures that the decoded VBScript runs every time the user logs in,https://www.rapid7.com/blog/post/2024/03/20/the-updated-apt-playbook-tales-from-the-kimsuky-threat-actor-group/
