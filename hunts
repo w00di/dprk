@@ -1,0 +1,22 @@
+# The Updated APT Playbook: Tales from the Kimsuky threat actor group
+(F.col('argv').contains('echo') & F.col('argv').contains('rxhly3v0zshtec5yzxnwb25zzvrlehqp') & F.col('argv').contains('\\links') & F.col('argv').contains('.dat')) |
+(F.col('argv').contains('certutil') & F.col('argv').contains('-decode') & F.col('argv').contains('.dat') & F.col('argv').contains('.vbs')) |
+(F.col('argv').contains('reg add') & F.col('argv').contains('hkcu\\software\\microsoft\\windows\\currentversion\\run') & F.col('argv').contains('\\links') & F.col('argv').contains('.vbs')) |
+(F.col('argv').contains('cscript') & F.col('argv').contains('\\users\\public\\libraries') & F.col('argv').contains('.vbs')) |
+(F.col('argv').contains('hh') & F.col('argv').contains('-decompile') & F.col('argv').contains('\\users\\public\\libraries')) |
+(F.col('argv').contains('schtasks') & F.col('argv').contains('/create') & F.col('argv').contains('minute') & F.col('argv').contains('/mo') & F.col('argv').contains('.vbs')) |
+(F.col('argv').contains('powershell') & F.col('argv').contains('bypass') & F.col('argv').contains('[datetime]::now.tostring') & F.col('argv').contains('[convert]::tobase64string([system.text.encoding]::ascii.getbytes($env:computername))') & F.col('argv').contains('[system.io.compression.zipfile]::open') & F.col('argv').contains('[system.io.compression.zipfileextensions]::createentryfromfile') & F.col('argv').contains('[convert]::tobase64string()') & F.col('argv').contains('new-object system.net.webclient')) |
+
+# Malware Disguised as Installer from Korean Public Institution (Kimsuky Group)
+(F.col('argv').contains('schtasks') & F.col('argv').contains('/create') & F.col('argv').contains('minute') & F.col('argv').contains('/mo') & F.col('argv').contains('svchost.exe')) |
+(F.col('argv').contains('del ') & F.col('argv').contains('/q') & F.col('argv').contains('\\appdata\\local\\temp') & F.col('argv').contains('svchost.exe')) |
+(F.col('argv').contains('powershell') & F.col('argv').contains('start-process') & F.col('argv').contains('-argumentlist') & F.col('argv').contains('\\programdata\\') & F.col('argv').contains('sekurlsa::logonpasswords')) |
+
+# Analysis of New DEEP#GOSU Attack Campaign Likely Associated with North Korean Kimsuky
+(F.col('argv').contains('new-object system.io.filestream') & F.col('argv').contains('new-object byte[]')) |
+(F.col('argv').contains('new-object byte[]') & F.col('argv').contains('start-process -filepath')) |
+(F.col('argv').contains('new-object system.io.memorystream') & F.col('argv').contains('new-object system.security.cryptography.rfc2898derivebytes') & F.col('argv').contains('new-object security.cryptography.aesmanaged') & F.col('argv').contains('new-object system.security.cryptography.cryptostream')) |
+(F.col('argv').contains('invoke-restmethod') & F.col('argv').contains('api.dropboxapi.com')) |
+(F.col('argv').contains('[system.net.httpwebrequest]::create') & F.col('argv').contains('content.dropboxapi.com')) |
+(F.col('argv').contains('new-object system.io.streamreader') & F.col('argv').contains('new-object system.io.memorystream') & F.col('argv').contains('new-object byte[]')) |
+(F.col('argv').contains('[system.text.encoding]::utf8.getstring') & F.col('argv').contains('iex'))
