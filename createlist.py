@@ -20,7 +20,8 @@ if args.ip:
     response = requests.get(url)
     ioc_list = response.text
     ioc = ioc_list.split('\n')
-    print(f'{args.delimiter}'.join(ioc))
+    ioc_split = f'{args.delimiter}'.join(ioc)
+    print(f' ip_hunt {ioc_split} --start {start} --end {end}' )
 
 elif args.domain:
     url = "https://raw.githubusercontent.com/w00di/dprk/main/domains"
@@ -28,7 +29,7 @@ elif args.domain:
     ioc_list = response.text
     ioc = ioc_list.split('\n')
     ioc_split = f'{args.delimiter}'.join(ioc)
-    print(f' hash_hunt {ioc_split} --start {start} --end {end}' )
+    print(f' domain_hunt {ioc_split} --start {start} --end {end}' )
 
 elif args.hash:
     url = "https://raw.githubusercontent.com/w00di/dprk/main/hashes"
