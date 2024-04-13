@@ -12,7 +12,6 @@ args = parser.parse_args()
 yesterday = datetime.now() - timedelta(1)
 start = datetime.strftime(yesterday, '%Y-%m-%d')
 end = datetime.now().strftime('%Y-%m-%d')
-print(start)
 
 
 if args.ip:
